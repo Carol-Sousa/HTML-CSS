@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes externas baixadas</title>
+    <style>
+        @font-face {
+            font-family:'Love' ;
+            src: url('fonts/love story ttf.ttf') format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        } /* PRIMEIRO INCLUO A FONTE NO CODIGO*/
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+    font-family:'Love' /*FONTE QUE INCLUI*/, Georgia, 'Times New Roman', Times, serif; /*AQUI, USO A FONTE QUE COLOQUEI*/
+    font-size: 4em;
+    font-weight: normal;
+}
+
+    </style>
+</head>
+<body>
+   <h1>Olá, mundo!</h1> 
+   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum dolorem molestiae est nisi natus harum magni aut dignissimos adipisci alias? Deserunt optio magni at aut dignissimos inventore maxime? Quas, aliquam?</p>
+</body>
+</html>
