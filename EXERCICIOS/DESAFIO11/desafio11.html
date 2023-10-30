@@ -6,11 +6,24 @@
     <title>Desafio 11</title>
     <style>
         #container {
+            position: relative;
             background-color: black;
             background-image: url(espaco.jpg);
+            height:93vh;
+            padding: 10px;
+            background-size: 100% 100%;
+
         }
         #conteudo {
-            background-color: pink;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            background-image: url(astronauta.png);
+            height: 300px;
+            width: 200px;
+            transform: translate(-50%, -50%);
+            background-size: 100% 100%;
+           
         }
     </style>
 </head>
