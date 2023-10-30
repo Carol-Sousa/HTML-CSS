@@ -1,0 +1,61 @@
+@charset "UTF-8";
+* {  /*CONFIGURAÇÃO GERAL/ tudo coladinho na pagina*/
+    margin: 0px; 
+    padding: 0px;
+}
+
+html, body {
+    background-color: darkgrey;
+    min-height: 100vh; /*TAMANHO MINIMO DO CONTEUDO ocupando 100 da ALTURA view port*/ /*VW= ALTURA/ VH= LARGURA*/
+}
+header {
+    background-color: black;
+    color: white;
+    text-align: center; /*CENTRALIZADO*/
+}
+header>h1 {
+    padding-top: 50px; /*DISTANCIA BORDA superior (top)>CONTEUDO*/
+     font-variant: small-caps; /*TODAS AS LETRAS MAIUSCULAS, POREM AS PRIMEIRAS DE CADA PALAVRA MAIORES QUE AS DEMAIS*/
+}
+header>p {
+    padding-bottom: 50PX;
+}
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder; /*NEGRITO*/
+}
+a:hover {
+    text-decoration: underline;
+}
+section /*ESSAS CONF. SERVEM PRAS DUAS SECTIONS (NORMAL E IMAGEM*/ {
+    padding-top: 10vh;
+    padding-bottom: 10vh; /*ALTURA PARA EU CONFIGURAR O EFEIto*/
+    line-height: 2em; /*ESPAÇAMENTO DUPLO DAS LINHAS*/
+    padding-left: 40px;  /*AFASTEI TEXTO DA BORDA LATERAL*/
+
+}
+section.normal {
+    background-color: white;
+    color: black;
+
+}
+
+section.imagem { background-color: rgb(206, 56, 101);
+    color: white;
+}
+
+section.imagem>p { /*PARAGRAFO QE TA DENTRO DA SECTION IMAGEM VAI TER UMA 'CAIXA' PRETA, pra não confundir a letra na imagem*/
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+
+
+
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
