@@ -51,6 +51,10 @@ section /*ESSAS CONF. SERVEM PRAS DUAS SECTIONS (NORMAL E IMAGEM*/ {
     font-family: var(--fonte3);
     font-size: 3.5vw;
 }
+
+section > p {
+    padding-bottom: 2em;
+}
 section.normal {
     background-color: white;
     color: black;
@@ -59,14 +63,26 @@ section.normal {
 
 section.imagem { background-color: rgb(206, 56, 101);
     color: white;
+    box-shadow: inset 7px 7px 15px 0px rgba(0, 0, 0, 0.678); /*sombra interna na imagem*/
+    background-attachment: fixed; /*EFEITO PARALAX*/
 }
 
 section.imagem>p { /*PARAGRAFO QE TA DENTRO DA SECTION IMAGEM VAI TER UMA 'CAIXA' PRETA, pra não confundir a letra na imagem*/
    display: inline-block; /*A CAIXA SE ADAPTA AO CONTEUDO*/ 
    padding: 6px; /*SO PRA NAO FICAR COLADO NO TEXTO*/
     background-color: rgba(0, 0, 0, 0.377);
+    text-shadow: 1.5px 1.5px 0px black ; /*SOMBRA DA LETRA*/
+    
 }
-
+section#img01 {
+    background-image: url(imagens/background001.jpg);
+    background-position: right center;
+    background-size: cover; /*REVISAR OQ É!!!!!!!*/
+}
+section#img02 {
+background-image: url(imagens/background002.jpg);
+background-size: cover;
+}
 
 
 
