@@ -9,19 +9,41 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*Preciso colocar para fazer o cabeçalho fixo*/
         }
         td, th {
             border: 1px solid black ;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em;
+            font-weight: bolder;
+            padding: 2px;
+            background-color: lightblue;
+        }
         thead {
             background-color: grey;
             color: rgb(255, 255, 255);
         }
+        thead > tr > th /*TH dentro de TR dentro do THEAD*/ {
+            position: sticky;
+            top: -1px;
+            background-color:grey;
+        } /*Cabeçalho fixo*/
         tfoot {
             background-color: gray;
             color: white;
         }
+        tbody > tr:nth-child(2n) { 
+            background-color: rgba(128, 128, 128, 0.301);
+        } /* EFEITO ZEBRADO, com subclasse nth-child (xxxn) 
+        toda linha (tr) dentro do body (tbody) terá o bgcolor grey, pulando de 2 em 2 (xxxn), altero o numero de cedulas a pular no (xxn)*/
+        /* O efeito zebrado é com 2n, um colorido/um branco, com o tbody não afeita as linhas de cabeçalho ou rodapé*/ 
+
+        /* posso tambem colorir as linhas pares/impares,para isso: tr:nth-child (odd ou) para impar/ tr:nth-child (even) pares*/ 
+        /*posso colocar outra cofig: xxxx (odd) bg white// xxxx (even) bg blue, bom para quando o fundo da tabela for de outra cor ou imagem*/
+
+
         td.num {
             text-align: right;
         }
@@ -30,6 +52,7 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <!--ANATOMIA PARA TABELAS GRANDES
+        CAPTION (LEGENDA)
         CABEÇA (THEAD)
         TR,TD,TH
         CORPO (TBODY)
@@ -38,10 +61,11 @@
         TR TD TH
     -->
     <table>
+        <caption>População por estado brasileiro</caption> <!--legenda/titulo da tabela-->
         <thead>
             <tr>
-                <th>Estado</th> <!--JÁ É CENTRALIZADO E NEGRITO-->
-                <th>População</th>
+                <th scope="col">Estado</th> <!--JÁ É CENTRALIZADO E NEGRITO-->
+                <th scope="col" style="width: 40px;">População</th> <!--SCOPE COL (EXPLICAÇÃO NO CADERNO// CSS PONTUAL PARA A LARGURA DA COLUNA)-->
             </tr>
         </thead>
         <tbody>
@@ -156,7 +180,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes
+                <th scope="row">Total de habitantes 
                     <td class="num"><strong>203.062.512</strong></td>
                 </th>
                 
@@ -165,5 +189,17 @@
         </tfoot>
 
     </table>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure totam id nihil nobis quis corrupti dolore consectetur, tempora alias dignissimos numquam labore laborum voluptas hic blanditiis voluptatibus sit, reiciendis dolorem.
+    Obcaecati ducimus perspiciatis ullam aspernatur hic error delectus quo facilis. Fugiat, mollitia, iusto officia quaerat dicta modi libero magnam temporibus eum adipisci, odit quis eius tempora dolor exercitationem ipsa quibusdam.
+    Sit commodi minus recusandae quod delectus eaque, et quia blanditiis id laudantium! Ullam, similique voluptates nisi voluptatum sint magni consequuntur reiciendis at eos quo beatae, numquam dolores consequatur error perspiciatis.
+    Quos illum, a rem quaerat reiciendis nihil molestiae tempora quis ut, alias officiis ratione laudantium hic expedita perferendis tenetur deleniti doloribus asperiores. Aliquam distinctio doloremque ab corrupti nisi, a in.
+    Atque magnam, minima architecto laborum id unde officia maiores quisquam dolorum eaque optio nesciunt porro quasi cumque possimus, neque esse. Inventore unde qui voluptatibus consectetur accusantium vel obcaecati corporis laudantium! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, velit labore ex magnam eos assumenda repellendus amet praesentium molestias aliquid sed. Perferendis laborum sunt beatae voluptatum eveniet quibusdam, cumque soluta?
+    Dolorem odit officiis voluptate! Error placeat expedita, nemo velit dolorem optio reiciendis alias, eaque officiis veniam eligendi? Eum rerum voluptatibus, fuga enim nisi sequi, eaque illo fugiat quam eos sapiente.
+    Hic magnam accusamus distinctio consequatur culpa molestias temporibus quibusdam eligendi blanditiis! Sint soluta libero itaque numquam neque quae, cumque, eius, iste minima ex vero voluptates nulla blanditiis quo tempore nemo.
+    Quasi delectus atque voluptatibus labore repellat alias ex quod mollitia deleniti ea illum vitae in, ipsam sapiente unde tempore consequuntur. Soluta porro quaerat, odio esse ratione reiciendis earum et aut!
+    Ratione possimus accusamus sint corrupti, quaerat beatae impedit consequuntur minima doloremque voluptates molestiae, harum animi officiis in dolore eveniet vitae reiciendis! Cupiditate reprehenderit rem eligendi qui aliquam animi quae dolorem.
+    Voluptatum velit aspernatur iusto hic? Officiis ad sed iste quidem omnis autem inventore. Corporis alias odio eaque molestias quisquam, non fugiat quaerat laudantium quam ea ducimus ipsa. Dolore, similique magni?
+    A odio inventore est nulla, culpa doloremque autem vitae maxime nemo, consequatur impedit? Excepturi neque, nemo, quasi repellat aliquam alias officiis tenetur, incidunt illo totam consequuntur? Necessitatibus, id? Ut, provident?
+    Excepturi obcaecati eligendi distinctio dolorum ut alias, ea atque earum quasi nihil corporis cum itaque impedit minus molestias ipsam voluptatum eius mollitia a, sapiente deserunt voluptates! Fuga quis laudantium alias.</p>
 </body>
 </html>
