@@ -1,0 +1,43 @@
+TABELA 
+CAPTION- Legenda da tabela Titulo
+Antes da cabeça 
+<Caption> TEXTO </C> Não precisa TH/TD
+
+TH: Titulo 
+TD: Dado
+ESCOPO <Scope>
+Não muda nada esteticamente, mas deixa claro para o HTML onde estão os dados do título, por exemplo na tabela:
+Os dados do título 'Estado' estão na mesma coluna, sendo assim:
+
+<th scope="col">ESTADO</th> 
+
+Já os dados do título 'Total de habitantes' estão na mesma linha, logo:
+<th scope="row"> Total de habitantes </th> 
+
+*IMPORTANTE PARA OS MECANISMOS DE BUSCA*
+
+
+EFEITO ZEBRADO NA TABELA 
+Facilita a leitura e identificação de dados. Feito com subclasse
+ 	tr:nth-child(xxxn)- + explicação no Vscode 
+
+CABEÇALHO FIXO
+ Só serve para tabelas grandes (funciona melhor no chrome)
+Mantem o cabeçalho fixo, qunado eu rolar a tabela, o cabeçalho acompanha, fica mais facil de identificar pra q cada dado serve. para isso:
+
+1º a tabela PRECISA ter um posicionamento relativo: 
+NO CSS: 
+Table {position: relative
+       Outras config}
+thead>tr>td {position:stick ('colável');
+             top:-1px; (Vai colar  na parte 0 da tela) 
+             background-color (Mesma cor do thead)}
+
+MESCLAGEM DE CÉLULAS
+Expansão em forma de coluna e linha (para celula ocupar 2 linhas ou 2 colunas)
+Para coluna: (Config pontual) 
+<td colspan "2"> C </td>
+Para linha :
+<td rowspan "2"> D </td>
+	
+ 
