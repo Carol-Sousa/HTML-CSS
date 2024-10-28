@@ -1,0 +1,77 @@
+@charset "UTF-8";
+/*Todas as demais midias*/
+/*Typical device breakpoints: Pre-definição de tamanhos de acordo com a tela, tornando o site responsivo,sendo:
+Telas pequenas: até 600px
+Celular: 600px-768px
+Tablet: 769px-1024px
+notbooks:1025px-1280px; grandes tealas 1281px-1440px
+telas maiores: acima de 144opx*/
+
+/*já tenho site para mobile*/
+
+@media print /*config para impressão
+IMPRESSÃO NÃO TEM BG*/ {
+    body {
+        font-family: 'Courier New', Courier, monospace;    
+    }
+    main {
+        border: 2px solid black;
+    }
+    main::after {
+        content: 'Site desenvolvido por Caról Sôusa';
+        
+    }
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+img#phone {display: none;}
+img#tablet {display: none;}
+img#print {display: block;}
+img#pc {display: none;}
+img#tv {display: none;}
+   
+
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) /*config. para tablets*/
+{
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+img#phone {display: none;}
+img#tablet {display: block;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: none;}
+}
+   
+
+@media screen and (min-width:1025px) and (max-width:1440px) /*config para telas pc*/{
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+img#phone {display: none;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: block;}
+img#tv {display: none;}
+
+    
+}
+@media  screen and (min-width:1441px) {
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    main {
+        width: 700px;
+    }
+img#phone {display: none;}
+img#tablet {display: none;}
+img#print {display: none;}
+img#pc {display: none;}
+img#tv {display: block;}
+
+}
+
+/*Configuração para cada tela*/
