@@ -1,0 +1,19 @@
+@charset "UTF-8";
+@media screen and (min-width: 768px){
+    i#burguer {
+        display: none;
+    }
+    menu {
+        display: block;
+    }
+    menu > ul > li {
+        display: inline-block;
+    }
+    main {
+        whidh: 700px
+    }
+
+   
+
+    
+} /*SE TIVER TELA ATÉ 767PX MOSTRA O MENU HABURGUER, SE TIVER NO MINIMO 768, JÁ É MOSTRADO CONFORME A CONFIGURAÇÃO AQUI*/ /*ESSAS MEDIDAS SÃO AQUELAS DE TELAS*/
